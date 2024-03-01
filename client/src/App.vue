@@ -1,5 +1,7 @@
 <template>
-<el-button type="primary" @click="test">测试按钮</el-button>
+<div class="container">
+  <el-button type="primary" @click="test">测试按钮</el-button>
+</div>
 </template>
 
 <script setup>
@@ -20,5 +22,7 @@ function test() {
 </script>
 
 <style scoped>
-
+.container {
+  height: 90vh;
+}
 </style>
