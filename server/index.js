@@ -7,7 +7,7 @@ app.get('/test', (req, res) => {
     res.json({
       code: 10000,
       msg: "操作成功！",
-      data: null
+      data: "test"
     })
   }, 500)
 })
