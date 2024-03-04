@@ -12,7 +12,7 @@
    let str = ref("")
    function getTest() {
        $http.get("/test").then((res) => {
-           str = res.data.data
+           str.value = res.data.data
        }).catch(() => {
 
        })
