@@ -105,7 +105,7 @@ function handleSuccessResponse_limit(response) {
       }
       pendingRequest.delete(reqKey)
       ev.emit(reqKey, x, 'resolve')
-      delete ev.reqKey
+      delete ev.event[reqKey]
     }
 }
 
@@ -126,7 +126,7 @@ function handleErrorResponse_limit(error) {
         }
         pendingRequest.delete(reqKey)
         ev.emit(reqKey, x, 'reject')
-        delete ev.reqKey
+        delete ev.event[reqKey]
       }
     }
       return Promise.reject(error);
